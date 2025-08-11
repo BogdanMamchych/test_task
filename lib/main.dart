@@ -32,15 +32,15 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   Random random = Random();
-  int _r = 255;
-  int _g = 255;
-  int _b = 255;
+  int _red = 255;
+  int _green = 255;
+  int _blue = 255;
   int _positionIndex = 0;
 
   void _generateBackgroundColor() {
-    _r = random.nextInt(256);
-    _g = random.nextInt(256);
-    _b = random.nextInt(256);
+    _red = random.nextInt(256);
+    _green = random.nextInt(256);
+    _blue = random.nextInt(256);
   }
 
   void _moveText() => _positionIndex = (_positionIndex + 1) % 3;
@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(_r, _g, _b, 1),
+      backgroundColor: Color.fromRGBO(_red, _green, _blue, 1),
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
