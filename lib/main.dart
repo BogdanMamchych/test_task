@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 alignment: _alignment(_positionIndex),
                 duration: const Duration(milliseconds: 500),
                 curve: Curves.fastOutSlowIn,
-                child: Padding(
+                child: const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
                       'Hello there',
